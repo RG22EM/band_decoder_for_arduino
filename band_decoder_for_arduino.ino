@@ -58,9 +58,9 @@ Outputs
 
 // #define INPUT_SERIAL       // telnet ascii input - cvs format [band],[freq]\n (serial.h)
 // #define ICOM_CIV           // read frequency from CIV (icom_civ.h) ** you must enabled 'CI-V transceive' in TRX settings **
- #define KENWOOD_PC         // RS232 CAT (kenwood_pc.h)
+// #define KENWOOD_PC         // RS232 CAT (kenwood_pc.h)
 // #define YAESU_CAT          // RS232 CAT (yaesu_cat.h) YAESU CAT since 2015 ascii format
-// #define YAESU_CAT_OLD      // Old binary format RS232 CAT (yaesu_cat_old.h) <------- ** tested on FT-817 **
+ #define YAESU_CAT_OLD      // Old binary format RS232 CAT (yaesu_cat_old.h) <------- ** tested on FT-817 **
 // #define YAESU_BCD          // TTL BCD in A  (yaesu_bcd.h)
 // #define ICOM_ACC           // voltage 0-8V on pin4 ACC(2) connector - need calibrate in (icom_acc.h)
 
@@ -68,18 +68,18 @@ Outputs
 
 // #define REMOTE_RELAY       // TCP/IP remote relay - need install and configure TCP232 module
 // #define SERIAL_echo        // Feedback on serial line in same baudrate, CVS format <[band],[freq]>\n
-// #define ICOM_CIV_OUT       // send frequency to CIV ** you must set TRX CIV_ADRESS, and disable ICOM_CIV **
+ #define ICOM_CIV_OUT       // send frequency to CIV ** you must set TRX CIV_ADRESS, and disable ICOM_CIV **
 // #define KENWOOD_PC_OUT     // send frequency to RS232 CAT ** for operation must disable REQUEST **
 // #define YAESU_CAT_OUT      // send frequency to RS232 CAT ** for operation must disable REQUEST **
- #define BCD_OUT            // output 11-14 relay used as Yaesu BCD
+// #define BCD_OUT            // output 11-14 relay used as Yaesu BCD
 
 //=====[ Settings ]===========================================================================================
 
  #define SERBAUD        115200  // [baud] Serial port in/out baudrate
  #define WATCHDOG       10    // [sec] determines the time, after which the all relay OFF, if missed next input data - uncomment for the enabled
  #define REQUEST            // use TXD output for sending frequency request (Kenwood PC, Yaesu CAT, Yaesu CAT old, Icom CIV)
- #define CIV_ADRESS   0x56  // CIV input HEX Icom adress (0x is prefix)
-// #define CIV_ADR_OUT  0x56  // CIV output HEX Icom adress (0x is prefix)
+// #define CIV_ADRESS   0x56  // CIV input HEX Icom adress (0x is prefix)
+ #define CIV_ADR_OUT  0x56  // CIV output HEX Icom adress (0x is prefix)
 
 //=====[ Sets band -->  to output in MATRIX table ]===========================================================
 
